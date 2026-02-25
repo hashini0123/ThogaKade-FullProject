@@ -1,15 +1,15 @@
 package edu.icet.service;
+import edu.icet.model.Customer;
 import edu.icet.repository.CustomerRepository;
+
+import java.util.List;
 
 public class CustomerService {
 
-    private CustomerRepository customerRepository;
+    private CustomerRepository customerRepository = new CustomerRepository();
 
-    public String getName(){
-        return customerRepository.getName();
+    public List<Customer> getAllCustomer(){
+        return customerRepository.getCustomerList();
     }
 
-    public String getAge(){
-        return customerRepository.getAge();
-    }
 }
