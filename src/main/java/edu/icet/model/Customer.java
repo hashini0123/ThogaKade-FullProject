@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -13,17 +14,17 @@ import java.time.LocalDate;
 @ToString
 public class Customer {
 
-    private String custID;
+    private String id;
 
-    private String custTitle;
+    private String title;
 
-    private String custName;
+    private String name;
 
-    private LocalDate DOB;
+    private Date DOB;
 
     private double salary;
 
-    private String custAddress;
+    private String address;
 
     private String city;
 

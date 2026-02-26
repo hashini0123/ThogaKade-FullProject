@@ -16,28 +16,18 @@ public class CustomerController {
     @Autowired
     CustomerService service;
 
-    @GetMapping("/get-all")
-    public List<Customer> getAllCustomer(){
-       return service.getAllCustomer();
-    }
-
-    @GetMapping
-    public List<String> stringList(){
-        return service.stringList();
-    }
-
-    @GetMapping
-    public List<String> stringList1(){
-        return service.stringList();
-    }
-
-    @GetMapping
-    public List<String> stringList2(){
-        return service.stringList();
-    }
-
     @PostMapping("/add")
     public void addCustomer(Customer customer){
         service.addCustomer(customer);
+    }
+
+    @GetMapping("/get/All")
+    public List<Customer> getAll(){
+       return service.getAllCustomer();
+    }
+
+    @PutMapping
+    public void updateCustomer(Customer customer){
+        service.updateCustomer(customer);
     }
 }
