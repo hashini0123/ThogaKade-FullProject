@@ -8,5 +8,9 @@ public interface CustomerService {
 
     List<Customer> getAllCustomer();
 
+    List<String> stringList();
+
     void addCustomer(Customer customer);
+
+    void updateCustomer(Customer customer);
 }
